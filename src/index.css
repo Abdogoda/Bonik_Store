@@ -1,0 +1,174 @@
+:root {
+  --white: #fff;
+  --light: #d1d1d1;
+  --bg-light: #f1f1f1;
+  --bg-item-light: #f6ffff;
+  --black: #222;
+  --dark: #444;
+  --red: #e94560;
+  --yellow: #ffcd4e;
+  --blue: #0f3460;
+  --transition: all 0.3s linear;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--white);
+  color: var(--black);
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.7rem;
+}
+h4 {
+  font-size: 1.4rem;
+}
+h5 {
+  font-size: 1.1rem;
+}
+p {
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+}
+a {
+  color: var(--dark);
+}
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+button {
+  background-color: transparent;
+}
+section {
+  width: 100%;
+  margin: 2rem auto;
+  padding: 2rem 0;
+}
+.bg-section {
+  background-color: #f6ffff;
+}
+section .section-heading {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+section .section-heading .section-heading-icon {
+  color: var(--red);
+}
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+.d-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.d-flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.w-100 {
+  width: 100%;
+}
+.btn {
+  position: relative;
+  border-radius: 0.8rem;
+  padding: 0.8rem 1.2rem;
+  background-color: var(--blue);
+  color: #fff;
+  border: 1px solid transparent;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  font-weight: bold;
+}
+.btn:hover {
+  background-color: transparent;
+  border-color: var(--blue);
+  color: var(--blue);
+}
+.btn.outline {
+  background-color: transparent;
+  border-color: var(--blue);
+  color: var(--blue) !important;
+}
+.btn.outline:hover {
+  background-color: var(--blue);
+  color: #fff !important;
+  border-color: transparent;
+}
+.btn.red {
+  background-color: var(--red);
+  border-color: transparent;
+  color: #fff !important;
+}
+.btn.red:hover {
+  background-color: transparent;
+  color: var(--red) !important;
+  border-color: var(--red);
+}
+.mtop {
+  margin-top: 5rem;
+}
+.ptop {
+  padding-top: 6rem;
+}
+/* media queries */
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 90%;
+  }
+  .container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 80%;
+  }
+  .container {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 70%;
+  }
+}
+@media screen and (max-width: 300px) {
+  html {
+    font-size: 60%;
+  }
+}
+@media screen and (max-width: 250px) {
+  html {
+    font-size: 50%;
+  }
+}

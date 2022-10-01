@@ -1,0 +1,54 @@
+.testimonials_container {
+  width: 450px;
+  max-width: 95%;
+  margin-bottom: 4rem;
+}
+.testimonials_container .testimonial {
+  height: auto;
+  text-align: center;
+  border: 1px solid var(--blue);
+  padding: 1.5rem;
+  border-radius: 0 2rem 0 2rem;
+  transition: var(--transition);
+}
+.testimonials_container .testimonial:hover {
+  border-color: var(--red);
+}
+.testimonials_container .testimonial:hover .client_name {
+  letter-spacing: 2px;
+}
+.testimonial .client_name {
+  margin: 0.8rem;
+  color: var(--blue);
+  transition: var(--transition);
+}
+.testimonial:hover .client_name {
+  color: var(--red);
+}
+.testimonial .client_review {
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--white);
+  background-color: var(--blue);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  transition: var(--transition);
+  top: 93%;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: var(--red);
+}
+.swiper-backface-hidden .swiper-slide {
+  transform: translateZ(0);
+  backface-visibility: visible;
+}

@@ -1,0 +1,29 @@
+.contact-form .inputs-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.contact-form .inputs-box input {
+  height: 2.5rem;
+}
+.text-message {
+  width: 100%;
+  margin-top: 1rem !important;
+}
+.text-message textarea {
+  height: 5rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 0.3rem;
+  resize: none;
+}
+.contact-form .send-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem;
+}
+@media (max-width: 600px) {
+  .contact-form .inputs-box {
+    grid-template-columns: 1fr;
+  }
+}

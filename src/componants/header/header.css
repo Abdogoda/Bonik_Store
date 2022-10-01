@@ -1,0 +1,294 @@
+/* start header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8.5rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  background-color: var(--white);
+  padding: 1.5rem 0;
+  z-index: 10000000;
+}
+header .container {
+  flex-direction: column;
+  position: relative;
+}
+header .container .top {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 15% 64% 15%;
+  gap: 3%;
+}
+.logo {
+  color: var(--red);
+  font-style: italic;
+  font-weight: bolder;
+}
+header .search-form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+header .search-form .input-control {
+  padding-left: 1.5rem;
+  width: 80%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.7rem;
+}
+header .input-control input {
+  padding: 0.7rem 0;
+  height: 100%;
+  width: 100%;
+}
+::placeholder {
+  color: var(--light);
+}
+header button {
+  background-color: var(--red);
+  border-radius: 0 1.5rem 1.5rem 0;
+  padding-right: 1rem;
+  width: 20%;
+  height: 100%;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  color: var(--white);
+  transition: var(--transition);
+}
+header button:hover {
+  background-color: var(--blue);
+}
+header .top-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+header .top-icons .top-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  color: var(--blue);
+  background-color: var(--bg-light);
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
+header .top-icons .top-icon svg {
+  transition: var(--transition);
+}
+header .top-icons .top-icon.profile-active {
+  border-color: var(--red);
+}
+header .top-icons .top-icon:hover {
+  background-color: var(--blue);
+}
+header .top-icons .top-icon:hover svg {
+  color: var(--white);
+}
+header .top-icons .shopping-btn {
+  position: relative;
+}
+header .top-icons .shopping-btn span {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background-color: var(--red);
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  top: -0.3rem;
+  right: -0.3rem;
+  font-size: 0.8rem;
+}
+header .bottom {
+  margin-top: 1.5rem;
+}
+header .bottom .categories-filter {
+  gap: 0.7rem;
+  background-color: var(--bg-light);
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.4rem;
+  color: var(--dark);
+  cursor: pointer;
+}
+header .bottom .categories-filter .category-arrow {
+  color: var(--red);
+}
+header .categories-filter .category-icon.active {
+  color: var(--red);
+  animation: category 1s infinite;
+}
+@keyframes category {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+header .bottom .categories {
+  position: fixed;
+  top: 9rem;
+  left: 7.5%;
+  width: 15rem;
+  border-radius: 0.3rem;
+  display: none;
+  z-index: 100;
+}
+header .bottom .categories.active {
+  display: block;
+}
+.bottom .categories .categories-list {
+  animation: opacity 0.2s linear;
+  z-index: 100;
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.bottom .categories .categories-list a {
+  background-color: var(--white);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding: 0.5rem;
+  height: 2.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  transition: var(--transition);
+  cursor: pointer;
+  animation: navAnimation 600ms ease forwards;
+  transform: rotateX(90deg);
+  opacity: 0;
+  transform-origin: top;
+}
+@keyframes navAnimation {
+  to {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+.bottom .categories .categories-list a:hover {
+  background-color: var(--bg-light);
+}
+.bottom .categories .categories-list a p {
+  transition: var(--transition);
+}
+.bottom .categories .categories-list a:hover p {
+  color: var(--red);
+}
+.bottom .categories .categories-list a img {
+  width: 1.8rem;
+}
+header .bottom .links-list {
+  gap: 1.5rem;
+}
+header .bottom .links-list li a {
+  display: flex;
+  align-items: center;
+  color: var(--dark);
+  transition: var(--transition);
+}
+header .bottom .links-list li:hover a,
+header .bottom .links-list li.active a {
+  color: var(--red);
+}
+header .bottom .links-list li a span.linkIcon {
+  display: none;
+}
+header .nav-toggler {
+  color: var(--dark);
+  transition: var(--transition);
+  font-size: 1.2rem;
+  display: none;
+}
+header .nav-toggler:hover {
+  color: var(--red);
+  transform: rotate(90deg);
+}
+@media screen and (max-width: 992px) {
+  header .bottom .categories {
+    left: 5%;
+  }
+}
+@media screen and (max-width: 600px) {
+  header {
+    padding: 1rem 0;
+  }
+  header .container .top {
+    grid-template-columns: 25% 44% 25%;
+  }
+  header .search-form .input-control {
+    padding-left: 0.5rem;
+    width: 60%;
+  }
+  header .input-control input {
+    padding: 0.5rem 0;
+    font-size: 0.8rem;
+  }
+  header button {
+    padding-right: 0.5rem;
+    font-size: 0.8rem;
+    width: 40%;
+  }
+  header .bottom .links-list li a span.linkIcon {
+    display: block;
+  }
+  header .nav-toggler {
+    display: block;
+  }
+  header .bottom .links-list {
+    width: 15rem;
+    flex-direction: column;
+    position: absolute;
+    top: calc(100% + 2rem);
+    right: 0;
+    gap: 0;
+    display: none;
+  }
+  header .bottom .links-list.active {
+    display: flex;
+  }
+  .bottom .links-list li {
+    width: 100%;
+    height: 4rem;
+    box-shadow: -0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.4);
+    animation: navAnimation 600ms ease forwards;
+    transform: rotateX(90deg);
+    opacity: 0;
+    transform-origin: top;
+  }
+  @keyframes navAnimation {
+    to {
+      transform: rotateX(0);
+      opacity: 1;
+    }
+  }
+  header .bottom .links-list li a {
+    background-color: var(--blue);
+    color: var(--white);
+    height: 100%;
+    width: 100%;
+    padding: 1rem 5rem 1rem 3rem;
+    gap: 1rem;
+  }
+  header .bottom .categories {
+    left: 2.5%;
+  }
+}

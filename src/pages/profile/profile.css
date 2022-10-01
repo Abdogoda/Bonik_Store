@@ -1,0 +1,31 @@
+.profile-container {
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.profile-container .left {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.profile-img {
+  font-size: 4rem;
+  background-color: var(--light);
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.sign-links {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem auto;
+}

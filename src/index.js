@@ -1,0 +1,16 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import "../node_modules/font-awesome/css/font-awesome.min.css";
+import { HashRouter } from "react-router-dom";
+import { AppProvider } from "./functions/Context";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <AppProvider>
+    <HashRouter>
+      <App />
+    </HashRouter>
+  </AppProvider>
+);
